@@ -295,13 +295,10 @@
 
   <script>
     const menuBtn = document.getElementById('menuBtn');
-    const toast = document.getElementById('toast');
-    let t;
-    menuBtn.addEventListener('click', () => {
-      clearTimeout(t);
-      toast.classList.add('show');
-      t = setTimeout(() => toast.classList.remove('show'), 2600);
-    });
+const MENU_URL = 'alruknalmasi%20menu-compressed.pdf';
+menuBtn.addEventListener('click', () => {
+  window.open(MENU_URL, '_blank', 'noopener');
+});
 
     function spawnBurst(x, y){
       const burst = document.createElement('div');
